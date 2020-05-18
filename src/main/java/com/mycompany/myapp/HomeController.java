@@ -39,5 +39,10 @@ public class HomeController {
 		
 		return "FileUpload";
 	}
+	@RequestMapping(value = "joinForm", method = RequestMethod.GET)
+	public String joinForm(Locale locale, Model model) {	
+		
+		return "joinForm";
+	}
 	
 }
