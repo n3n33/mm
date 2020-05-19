@@ -14,14 +14,16 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<c:if test="${msg == 'success'}">
-<p>${sessionScope.userId}</p>
-</c:if>
-
-
+<h2>Login Demo</h2>
+<form method="post" action="/demo_pro/login">
+  <div class="form-group">
+    <input type="text" class="form-control" id="userId" name="userId" placeholder="User Name">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" id="userPw" name="userPw" placeholder="Password">
+  </div>
+  <button type="submit" class="submit" id="submit">Sign In</button>
+</form>
+<button type="button" class="btn btn-primary">JOIN US</button>
 </body>
 </html>

@@ -18,31 +18,10 @@
 	Hello world!  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
-<%
- String path=application.getRealPath("/");
-File f=new File(path);
-for(String s : f.list()){
-out.println(s+"<br>");
-                out.println("<a href="+s+">"+ s +" </a><br>");
-}
-    
- out.println(path);
-
-String path1 = application.getRealPath("/");       //=>     c:~~~/플젝명/
-String path2 = application.getRealPath("/aa/bb");  //=>     c:~~~/플젝명/aa/bb
- out.println(path1); 
+<c:if test="${msg == 'success'}">
+<p>${sessionScope.userId}</p>
+</c:if>
 
 
-%>
-<br><button type="button" id="btnJoin" class="btn btn-success">JOIN</button>
-
-<script>
-	$(document).click(function(){
-		$('#btnJoin').click(function(){
-			location.href = "joinForm.jsp";
-		});
-	});
-</script>
 </body>
 </html>

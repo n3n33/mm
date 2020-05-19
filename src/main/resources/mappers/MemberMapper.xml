@@ -5,6 +5,8 @@
 
 
 <mapper namespace="MemberMapper">
+
+	<!-- Register SQL -->
 	<insert id="register">
 		INSERT INTO
 		MEMBER
@@ -12,4 +14,12 @@
 		VALUES
 		(#{userId},#{userPw})
 	</insert>
+	
+	<!-- Login SQL -->
+	<select id="login" resultType="com.mycompany.myapp.VO.MemberVO">
+		SELECT USERID
+		FROM MEMBER
+		WHERE USERID = #{userId}
+		AND USERPW =  #{userPw}
+	</select>
 </mapper>
